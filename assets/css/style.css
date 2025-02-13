@@ -1,0 +1,324 @@
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Figtree", serif;
+    font-weight: 500;
+}
+img{
+    max-width: 100%;
+}
+.container{
+    max-width: 1024px;
+    width: 100%;
+    padding: 0px 15px;
+    display: block;
+    margin: auto;
+}
+.bread-cramb{
+    background: #000;
+    padding-top: 120px;
+    padding-bottom: 30px;
+    color: #fff;
+}
+header{
+    padding: 8px 0px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    transition: all 0.5s;
+}
+header.scroll{
+    background: #fff3;
+    backdrop-filter: blur(10px);
+}
+header .header-box,
+header .header-box nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .header-box nav ul{
+    display: flex;
+    list-style-type: none;
+}
+header .header-box nav ul li{
+    margin: 5px;
+    padding: 5px 6px;
+    color: #fff;
+}
+header .header-box nav ul li.menu-item-has-children{
+    position: relative;
+    padding-right: 20px;
+}
+header .header-box nav ul li.menu-item-has-children:after{
+    content: "\f345";
+    /* content: '+'; */
+    margin-top: 2px;
+    font-family: 'dashicons';
+    position: absolute;
+    right: 2px;
+    transition: all 0.5s;
+    top: 50%;
+    width: fit-content;
+    aspect-ratio: 1;
+    transform: translateY(-50%) rotate(90deg);
+}
+.store-content{
+    padding: 30px 0px;
+}
+header .header-box nav ul li:hover ul.sub-menu{
+    max-height: 250px;
+    transition: all 0.5s;
+}
+header .logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header .menu-icon{
+    height: 25px;
+    width: 25px;
+    padding: 5px;
+    /* border: 1px solid #fff; */
+    position: relative;
+    display: none;
+}
+header .menu-icon span{
+    position: absolute;
+    height: 2px;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    background: #fff;
+    transform: translate(-50%, -50%);
+    transition: all 0.5s;
+}
+header .menu-icon span:nth-child(1){
+    margin-top: -8px;
+}
+header .menu-icon span:nth-child(3){
+    margin-top: 8px;
+}
+header .menu-icon.active span:nth-child(1){
+    margin-top: 0;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+header .menu-icon.active span:nth-child(2){
+ opacity: 0;
+}
+header .menu-icon.active span:nth-child(3){
+    margin-top: 0;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+header .header-box nav ul li > ul.sub-menu{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    flex-flow: column;
+    background: #fff3;
+    backdrop-filter: blur(10px);
+    border-radius: 5px;
+    min-width: max-content;
+    max-height: 0;
+    overflow: hidden;
+}
+header .header-box nav ul li ul li{
+    padding: 2px 6px;
+}
+header .header-box nav ul li a{
+    text-decoration: none;
+    font-size: 14px;
+    color: #fff;
+}
+header .header-box .thm-btn-1{
+    margin-left: 10px;
+}
+.thm-btn-1,
+.thm-btn-2{
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    outline: none;
+    border-color: transparent;
+    cursor: pointer;
+}
+.thm-btn-1{
+    background: #fff;
+    color: #000;
+}
+.thm-btn-2{
+    background:#fe1818;
+    color: #fff;
+}
+.hero{
+    position: relative;
+    padding-top: 150px;
+    padding-bottom: 30px;
+}
+.hero::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to right, #0C0E17 2%, #0C0E1703);
+    z-index: 1;
+}
+.hero .container{
+    position: relative;
+    z-index: 3;
+}
+.thm-row {
+    display: flex;
+    align-items: center;
+}
+.thm-col-6{
+    width: calc(100% / 2);
+}
+.hero .content {
+    padding: 10px;
+}
+.hero .content h1{
+color: #fff;
+font-size: 48px;
+line-height: 56px;
+}
+
+.hero .content  p{
+    color: #fff;
+    margin: 15px 0px;
+    line-height: 24px;
+}
+.hero .content  .btn-set{
+display: flex;
+}
+.hero .content  .btn-set .thm-btn-1,
+.hero .content  .btn-set .thm-btn-2{
+    margin: 5px;
+}
+
+.hero form{
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+}
+.hero form input::placeholder,
+.hero form select::placeholder,
+.hero form textarea::placeholder{
+    font-size: 12px;
+}
+.hero form input,
+.hero form select,
+.hero form textarea{
+    font-size: 14px;
+    padding: 5px;
+    width: 100%;
+    margin: 5px auto;
+    outline: none;
+    border-color: transparent;
+    border-radius: 5px;
+}
+
+.hero form textarea {
+    min-height: 60px;
+    max-width: 100%;
+    min-width: 100%;
+}
+.hero .form-box{
+background: #fff3;
+backdrop-filter: blur(15px);
+padding: 20px;
+display: flex;
+flex-flow: column;
+max-width: 300px;
+width: 100%;
+margin: auto;
+border-radius: 5px;
+}
+.hero .form-box h2{
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 1px #3334;
+    margin-bottom: 10px;
+}
+.hero .form-box  button{
+    padding: 5px 15px;
+    margin-top: 5px;
+}
+
+@media (max-width: 765px) {
+    header .logo {
+        width: 100%;
+        padding: 5px;
+        border-radius: 5px;
+    }
+
+    header .logo img{
+        padding-right: 15px;
+    }
+    header .header-box nav{
+       max-height: 0;
+       overflow: hidden;
+       padding: 0;
+       transition: all 0.5s;
+       width: 100%;
+       align-items: flex-start;
+       background: #000;
+       border-radius: 5px;
+    }
+    header .header-box nav.active{
+       overflow: auto;
+       padding: 15px;
+    }
+    header .header-box,
+    header .header-box nav,
+    header .header-box nav ul{
+        flex-flow: column;
+    }
+
+    header .header-box .thm-btn-1{
+        margin-top: 8px;
+    }
+    header .header-box nav ul{
+        width: 100%;
+    }
+    header .header-box nav ul li > ul.sub-menu{
+     position: relative;
+     max-height: 0px;
+     transition: 0.5s;
+    }
+    header .header-box nav ul li.active > ul.sub-menu{
+        max-height: 300px;
+        position: relative;
+        margin-top: 10px;
+    }
+    header .header-box nav ul li > ul.sub-menu li:last-child{
+        border-bottom-color:transparent ;
+    }
+    header .header-box nav ul li{
+        border-bottom: 1px solid #fff;
+    }
+    header .header-box nav ul li.menu-item-has-children:after{
+        top: 12px;
+    }
+    header .menu-icon{
+        display: block;
+    }
+    .thm-row,
+    .hero .content .btn-set{
+        flex-wrap: wrap;
+    }
+    .thm-col-6{
+        width: 100%;
+    }
+    .hero .content .btn-set{
+        margin-bottom: 25px;
+    }
+}
