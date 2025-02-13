@@ -70,10 +70,7 @@ header .header-box nav ul li.menu-item-has-children:after{
 .store-content{
     padding: 30px 0px;
 }
-header .header-box nav ul li:hover ul.sub-menu{
-    max-height: 250px;
-    transition: all 0.5s;
-}
+
 header .logo {
     display: flex;
     align-items: center;
@@ -134,6 +131,7 @@ header .header-box nav ul li a{
     font-size: 14px;
     color: #fff;
 }
+
 header .header-box .thm-btn-1{
     margin-left: 10px;
 }
@@ -252,7 +250,12 @@ border-radius: 5px;
     padding: 5px 15px;
     margin-top: 5px;
 }
-
+@media (min-width: 766px) {
+    header .header-box nav ul li:hover ul.sub-menu{
+        max-height: 250px;
+        transition: all 0.5s;
+    }
+}
 @media (max-width: 765px) {
     header .logo {
         width: 100%;
@@ -272,6 +275,9 @@ border-radius: 5px;
        align-items: flex-start;
        background: #000;
        border-radius: 5px;
+    }
+    header .menu-main-menu-container{
+        width: 100%;
     }
     header .header-box nav.active{
        overflow: auto;
