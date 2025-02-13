@@ -252,9 +252,9 @@ border-radius: 5px;
 }
 @media (min-width: 766px) {
     header .header-box nav ul li:hover ul.sub-menu{
-        max-height: 250px;
-        transition: all 0.5s;
-    }
+    max-height: 250px;
+    transition: all 0.5s;
+}
 }
 @media (max-width: 765px) {
     header .logo {
